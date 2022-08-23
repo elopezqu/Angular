@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  baseurl="http://127.0.0.1:8000/productos/";
+  baseurl="https://proyecto-final-grupo04.herokuapp.com/productos/";
   httpHeaders = new HttpHeaders({'Content-Type':'application/json'});
   constructor(private http:HttpClient) { }
 

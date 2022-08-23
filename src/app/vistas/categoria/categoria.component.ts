@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/api.service';
 })
 
 export class CategoriaComponent implements OnInit {
-  categorias = [{id:1,nombre_categoria:"nombre",cantidad_producto:0}];
+  categorias = [{id:1,nombre_categoria:"ninguna categoría",cantidad_producto:0}];
   constructor(private api:ApiService) { 
     this.getCategorias();
   }

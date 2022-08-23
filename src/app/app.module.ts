@@ -8,6 +8,7 @@ import { HomeComponent } from './vistas/home/home.component';
 import { CategoriaComponent } from './vistas/categoria/categoria.component';
 import { ListProductosComponent } from './vistas/list-productos/list-productos.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
+import { InformeVentaComponent } from './vistas/informe-venta/informe-venta.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductosComponent } from './vistas/productos/productos.component';
     HomeComponent,
     CategoriaComponent,
     ListProductosComponent,
-    ProductosComponent
+    ProductosComponent,
+    InformeVentaComponent
   ],
   imports: [
     BrowserModule,
