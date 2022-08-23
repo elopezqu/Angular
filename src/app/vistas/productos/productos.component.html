@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content=" " />
+    <!-- Title -->
+    <title>Product Details Default - Posh Auto Parts eCommerce Bootstrap 4 Html Template</title>
+    <!-- Favicon  -->
+
+    <!-- *********** CSS Files *********** -->
+    <!-- Plugin CSS -->
+    <!-- Styles CSS -->
+</head>
+
+<body class="template-product-detail-default sticky-view-product">
+    <!-- Start Page Loader -->
+    <div class="page-loading"></div>
+    <!-- End Page Loader -->
+
+    <!--  Start Main Wrapper -->
+    <div class="main-wrapper cart-drawer-push">
+
+        <!-- Start Main Content -->
+        <main class="main-content">
+            <!-- Start Breadcrumb -->
+            <div class="breadcrumbs text-center">
+                <div class="container">
+                    <h1>Detalles del producto</h1>
+                    <ul class="breadcrumb bg-transparent m-0 p-0 justify-content-center">
+                        <li class="breadcrumb-item"><a [routerLink]="['']" title="Home">Inicio</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/categorias']" title="Home">Categorias</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/categorias']" title="Home">Lista de Producto</a></li>
+                        <li class="breadcrumb-item active">Detalles del Producto </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Breadcrumb -->
+
+            <!-- Start Single Product Detail -->
+            <div class="product-single">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start Product Store Features -->
+                        <div class="col-12 col-sm-12 col-md-6 product-store-features" style="background-color:yellow">
+
+                        </div>
+                        <!-- End Product Store Features -->
+
+                        <!-- Start Product Info Details -->
+                        <div id="produc" *ngFor="let producto of productos">
+                        <div *ngIf="producto.nombre===prod" class="col-12 col-sm-12 col-md-6 product-info-details">
+                            <p style="color:red"><span class="align-middle"><h4>Producto: {{ producto.nombre }}</h4></span></p>
+                            <ul class="d-sm-flex flex-sm-row align-items-sm-center product-price-info">
+                                <li class="product-price m-0">
+                                    <span class="sale-price">Costo por unidad: S/.{{ producto.precio_unidad }}<br>Costo por paquete: S/.{{ producto.precio_paquete }}</span></li>
+                                <li class="save-price">Cantidad de paquetes: {{ producto.cantidad_de_paquete }}<br> <span class="save-count">Cantidad por paquete: {{producto.cantidad_por_paquete}}</span></li>
+                            </ul>
+
+                            <ul class="d-flex flex-column pro-lists">
+                                <li><i class="fa fa-check mr-2" aria-hidden="true"></i>Fecha de carga: {{producto.fecha_carga}} </li>
+                                <li><i class="fa fa-check mr-2" aria-hidden="true"></i>Fecha de vencimiento: {{producto.fecha_vencimiento}}</li>
+                                <li><i class="fa fa-check mr-2" aria-hidden="true"></i>Proveedor: {{producto.Proveedor}}</li>
+                                <li><i class="fa fa-check mr-2" aria-hidden="true"></i>Categoria: {{producto.nombre_categoria}} , num: {{producto.categoria}}</li>
+                            </ul>
+                            <!-- End Product List Info -->
+
+                            <div class="product-counter-text clearfix">
+                                <h4>Total de productos: {{producto.cantidad_total}}</h4>
+                            </div>
+                            <!-- End Product Time Counter -->
+
+                            <!-- Start Cart Box -->
+                            <div class="addToBox">
+                                <form action="#" class="d-sm-flex flex-sm-row">
+                                    <!-- Start Product Quantity -->
+                                     <p>Cantidad vendida:</p>
+                                    <div class="product-form-item product-quantity">
+                                        <div class="qty-box">
+                                            <button type="button" class="qtyminus button" value=""><i
+                                                    class="fa fa-minus"></i>-</button>
+                                            <input type="text" name='quantity' value={{producto.cantidad_vendida}} class="qty-input" />
+                                            <button type="button" class="qtyplus button" value=""><i
+                                                    class="fa fa-plus"></i>+</button>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Quantity -->
+                                    <!-- Start Product Add Cart -->
+                                    <div class="product-form-item product-submit btn-block">
+                                        <a href="cart.html"
+                                            class="btn btn-primary btn-block product-btn-cart add-cart">Vender</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </body>
+</html>

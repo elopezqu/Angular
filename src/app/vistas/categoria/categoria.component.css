@@ -1,0 +1,91 @@
+
+/* ============================================ *
+ * 3. Typography
+ * ============================================ */
+ h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; font-family: 'Rubik', sans-serif; }
+
+ h1 { font-size:4.0rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ h2 { font-size:3.0rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ h3 { font-size:2.4rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ h4 { font-size:1.8rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ h5 { font-size:1.5rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ h6 { font-size:1.5rem; font-weight:400; line-height:normal; margin:0 0 15px; }
+ p { margin:0 0 15px; }
+ 
+ .font-12{ font-size:12px !important; }
+ .font-13{ font-size:13px !important; }
+ .font-14{ font-size:14px !important; }
+ .font-15{ font-size:15px !important; }
+ .font-16{ font-size:16px !important; }
+ 
+ .contenedor {
+     display: flex;
+     justify-content: center;
+     padding-bottom:50px;
+ }
+ .btn btn-success{
+     border: 3px solid #73AD21;
+     width : 200px;
+ }
+.form{
+     text-align: left;
+     padding-left: 10%;
+     padding-right: 65%;
+     padding-bottom: 20px;
+     padding-top: 20px;
+     background-color: #9d9d9d;
+ }
+ input {
+    margin-bottom: 10px;
+ }
+ #num {
+    width: 40%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-right: 30%;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+ .row row-sp{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: baseline;
+}
+ /* ==========================================================================
+  * 23. Breadcrumbs
+  * ========================================================================== */
+ .breadcrumbs { color:#9d9d9d; font-size:14px; text-transform:capitalize; background-color:#333; padding:60px 0 63px; margin-bottom:50px; }
+ .breadcrumbs h1 { color:#9d9d9d; font-size:35px; font-weight:bold; margin:0 0 7px; }
+ .breadcrumbs .breadcrumb a{ color:#747474; }
+ .breadcrumbs .breadcrumb a:hover{ color:#f76d2b; }
+ .breadcrumb-item.active { color:#9d9d9d; }
+ .breadcrumb-item + .breadcrumb-item{ padding-left:10px; }
+ .breadcrumb-item + .breadcrumb-item::before { content:"\e649"; font-family:'themify'; color:#747474; font-size:10px; padding-right:10px; }
+ .breadcrumbs.classic-breadcrumbs { background-color:#e9e9e9; padding:13px 0; }
+ 
+ 
+ /* Colection Listing */
+ .colection-listing .collection-details{ margin:15px 0 0; }
+ .colection-listing .collection-details .count-pro { margin:0 0 5px; }
+ .colection-listing .collection-details .collection-title { font-size:18px; font-weight:500; line-height:normal; margin:0 0 8px; display:block; }
+ .colection-listing .collection-item:hover .animate-scale img { opacity:1; -moz-transform:scale3d(1.1, 1.1, 1); -o-transform:scale3d(1.1, 1.1, 1); -ms-transform:scale3d(1.1, 1.1, 1); -webkit-transform:scale3d(1.1, 1.1, 1); transform:scale3d(1.1, 1.1, 1); }
+ .colection-listing .collection-item:hover .animate-scale:before { overflow:visible; opacity:1; }
+ .colection-listing .collection-details .btn { padding:5px 20px; font-size:13px; }
+ 

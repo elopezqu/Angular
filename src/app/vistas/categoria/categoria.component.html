@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content=" " />
+        <!-- Styles CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body class="template-collections-listing" >
+
+        <div class="main-wrapper cart-drawer-push">
+
+
+            <!-- Start Main Content -->
+            <main class="main-content">
+                <!-- Start Breadcrumb -->
+                <div class="breadcrumbs text-center">
+                    <div class="container">
+                        <h1>Categoría de los productos</h1>
+                        <ul class="breadcrumb bg-transparent m-0 p-0 justify-content-center">
+                            <li class="breadcrumb-item"><a [routerLink]="['home']" title="Home">Inicio</a></li>
+                            <li class="breadcrumb-item active">Categoría</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Start Collection List -->
+                <div class="colection-listing">
+                    <div class="container">
+                        <div class="row row-sp">
+                            <div *ngFor="let categoria of categorias" class="col-sp col-6 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                                <div class="collection-item position-relative text-center mb-5">
+                                    <div class="collection-details">
+                                        <a  >Código: {{ categoria.id }} </a>
+                                        <a class="collection-title" ><h5>{{ categoria.nombre_categoria }}</h5></a>
+                                        <p class="count-pro">{{ categoria.cantidad_producto }} productos</p>
+                                        <a [routerLink]="['/lista_productos',categoria.id]" class="btn btn-success">shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Collection List -->
+            </main>
+            <div class="form">
+                <h4>Nueva Categoria</h4>
+                <label for="exampleInputEmail1" class="form-label">Nombre de la Categoria</label>
+                <input type="text" class="form-control"  #nombre>
+                <label for="exampleInputPassword1" class="form-label">Cantidad de Productos</label>
+                <input type="number" id="num" min="0"#num><br>
+                <button (click)="newCategoria(nombre,num)" (click)="nombre.value='';num.value=''"  class="btn btn-primary">Enviar</button>
+            </div>
+            <!-- End Main Content -->
+        </div>
+    </body>
+</html>
